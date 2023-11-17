@@ -15,5 +15,12 @@ document.addEventListener('keydown', function(event) {
   } else if (event.key === 'ArrowRight') {
     const player = getShortsPlayer()
     if (player) player.currentTime +=3
+  } else if (event.key === 'f') {
+    const player = getShortsPlayer()
+    if (player && player?.requestFullscreen) {
+      player?.requestFullscreen?.()?.then(() => {
+        player.style['object-fit'] = 'contain'
+      })
+    }
   }
 });
