@@ -1,0 +1,12 @@
+{
+  "manifest_version": 2,
+  "name": "YouTube Shorts Forwards Backwards",
+  "version": "1.0",
+  "description": "Listens for forward and backwards keyboard event and updates the short player",
+  "permissions": ["activeTab"],
+  "content_scripts": [{
+    "matches": ["*://*.youtube.com/shorts/*"],
+    "js": ["content.js"]
+  }]
+}
+
